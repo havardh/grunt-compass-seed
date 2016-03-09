@@ -1,0 +1,17 @@
+module.exports = function(grunt) {
+  grunt.initConfig({
+    compass: {                  // Task
+      dev: {                    // Another target
+        options: {
+          sassDir: 'app/sass',
+          cssDir: 'dist/css',
+          watch: true
+        }
+      }
+    }
+  });
+
+  grunt.loadNpmTasks('grunt-contrib-compass');
+
+  grunt.registerTask('default', ['compass']);
+}
